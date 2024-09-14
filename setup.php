@@ -4,10 +4,10 @@
   require_once WEP_APP_PAGE_TO_ROOT . "setup.inc.php"; 
   
   $_bdd = array();
-  $_bdd['server'] = '127.0.0.1';
-  $_bdd['port'] = '3306';
-  $_bdd['user'] = 'root';
-  $_bdd['password'] = 'root';
+  $_bdd['server'] = getenv('DB_SERVER') ?: '127.0.0.1';
+  $_bdd['port'] = getenv('DB_PORT') ?: '3306';
+  $_bdd['user'] = getenv('DB_USER') ?: 'root';
+  $_bdd['password'] = getenv('DB_PASSWORD') ?: 'root';
 
   function checkBdd($_bdd) {
     try {
