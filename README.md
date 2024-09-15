@@ -10,7 +10,7 @@ Cette application web reprend les mêmes exercices que ceux de l'application d'o
 
 - Application web illustrant les exercices pratiques de sécurité offensive et défensive.
 - Déploiement simplifié à l'aide de Docker et Docker Compose.
-- Le répertoire _/exercices_ est monté pour faciliter la correction des exercices, y compris dans le conteneur de base de données, afin de permettre la réussite de l'exploitation de l'injection SQL de type "RCE".
+- Le répertoire _/exercices_ est monté pour faciliter la correction des exercices (et également dans le conteneur de base de données, afin de permettre la réussite de l'exploitation de l'injection SQL de type "RCE").
 
 ## Pré-requis
 
