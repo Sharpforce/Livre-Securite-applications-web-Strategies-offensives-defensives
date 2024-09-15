@@ -15,7 +15,7 @@ services:
     networks:
       - securite-applications-network
     volumes:
-      - ./exercices:/var/www/html/exercices
+      - ./exercices:/var/www/html/Livre-Securite-applications-web-Strategies-offensives-defensives/exercices
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
       interval: 30s

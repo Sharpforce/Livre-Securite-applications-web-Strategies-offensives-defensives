@@ -14,8 +14,9 @@ RUN apt-get update && \
 
 RUN sed -i 's/allow_url_include = Off/allow_url_include = On/' /etc/php/8.2/apache2/php.ini
 
+RUN mkdir -p /var/www/html/Livre-Securite-applications-web-Strategies-offensives-defensives
 
-WORKDIR /var/www/html
+WORKDIR /var/www/html/Livre-Securite-applications-web-Strategies-offensives-defensives
 
 COPY . .
 
