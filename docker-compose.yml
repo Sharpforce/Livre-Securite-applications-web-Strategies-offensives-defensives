@@ -32,6 +32,7 @@ services:
       - securite-applications-network
     volumes:
       - securite-applications-data:/var/lib/mysql
+      - ./exercices:/var/www/html/Livre-Securite-applications-web-Strategies-offensives-defensives/exercices
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       start_period: 10s
