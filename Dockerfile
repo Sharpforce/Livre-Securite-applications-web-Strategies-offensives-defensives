@@ -1,18 +1,9 @@
-FROM debian:12
+FROM php:8.2-apache
 
-ENV DEBIAN_FRONTEND=noninteractive
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-RUN apt-get update && \
-    apt-get install -y \
-    apache2 \
-    php \
-    php-mysql \
-    php-curl \
-    php-xml && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN sed -i 's/allow_url_include = Off/allow_url_include = On/' /etc/php/8.2/apache2/php.ini
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+RUN sed -i 's/allow_url_include = Off/allow_url_include = On/' /usr/local/etc/php/php.ini
 
 RUN mkdir -p /var/www/html/Livre-Securite-applications-web-Strategies-offensives-defensives
 
@@ -24,6 +15,6 @@ RUN rm -f index.html && \
     chown -R www-data:www-data /var/www/html && \
     chmod -R 755 /var/www
 
-EXPOSE 80
+USER www-data
 
-CMD ["apachectl", "-D", "FOREGROUND"]
+EXPOSE 80
