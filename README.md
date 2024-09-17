@@ -34,4 +34,4 @@ cd Livre-Securite-applications-web-Strategies-offensives-defensives
 docker-compose up --build
 ```
 
-3. L'application sera disponible à l'adresse suivante : http://localhost:8080/Livre-Securite-applications-web-Strategies-offensives-defensives/
+3. L'application sera disponible à l'adresse suivante : http://localhost/Livre-Securite-applications-web-Strategies-offensives-defensives/
