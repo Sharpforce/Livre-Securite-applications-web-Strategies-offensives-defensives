@@ -2,7 +2,7 @@ FROM php:8.2-apache
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 RUN sed -i 's/allow_url_include = Off/allow_url_include = On/' /usr/local/etc/php/php.ini
 
 RUN mkdir -p /var/www/html/Livre-Securite-applications-web-Strategies-offensives-defensives
